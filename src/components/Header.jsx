@@ -158,7 +158,7 @@ const Header = ({ menuOpen, toggleMenu, closeMenu }) => {
                   সম্বন্ধে
                 </NavLink>
               </li>
-              <li className="nav__item">
+              {/* <li className="nav__item">
                 <NavLink
                   to="/ortho-smart"
                   className={({ isActive }) =>
@@ -168,7 +168,7 @@ const Header = ({ menuOpen, toggleMenu, closeMenu }) => {
                 >
                   Ortho Smart
                 </NavLink>
-              </li>
+              </li> */}
 
               <li className="nav__item">
                 <NavLink

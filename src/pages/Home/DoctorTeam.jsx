@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation, Autoplay } from "swiper/modules";
 import { Autoplay } from "swiper/modules"; // ✅ v11+
 import "swiper/css";
 import "swiper/css/navigation";
+
 import doctorsArray from "../../doctors.js";
 
 const DoctorTeam = () => {
