@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const chambers = [
@@ -76,12 +77,12 @@ const ChamberContacts = () => {
                   <div className="info-row d-flex align-items-start gap-2 py-2">
                     <i className="fa-solid fa-phone info-icon"></i>
 
-                    <a
-                      href={`tel:${chamber.phone}`}
+                    <Link
+                      to={`tel:${chamber.phone}`}
                       className="phone-text text-decoration-none"
                     >
                       {chamber.phone}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

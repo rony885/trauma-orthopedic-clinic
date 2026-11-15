@@ -47,7 +47,7 @@ const DoctorInformation = () => {
                   <div className="avatar-ring rounded-circle">
                     <img
                       src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&auto=format&fit=crop&q=80"
-                      alt="ডাঃ মোঃ দ্বীন ইসলাম"
+                      alt="Doctor"
                       className="avatar-img rounded-circle"
                     />
                   </div>

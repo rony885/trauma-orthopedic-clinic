@@ -10,20 +10,20 @@ import NotFound from "./components/NotFound";
 import PageTitle from "./components/PageTitle";
 
 import Home from "./pages/Home/Home";
-import DoctorsTimetable from "./pages/DoctorsTimetable/DoctorsTimetable";
 import About from "./pages/About/About";
-import Packages from "./pages/Packages/Packages";
-import PackagesDetails from "./pages/PackagesDetails/PackagesDetails";
+
 import Service from "./pages/Service/Service";
 import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
+
 import Doctors from "./pages/Doctors/Doctors";
 import DoctorDetails from "./pages/DoctorDetails/DoctorDetails";
+
 import Gallery from "./pages/Gallery/Gallery";
 import Blog from "./pages/Blog/Blog";
 import BlogDetails from "./pages/BlogDetails/BlogDetails";
+
 import Contact from "./pages/Contact/Contact";
 import Appointment from "./pages/Appointment/Appointment";
-import AppointmentDoctor from "./pages/AppointmentDoctor/AppointmentDoctor";
 import OrthoSmart from "./pages/OrthoSmart/OrthoSmart";
 
 function App() {
@@ -66,40 +66,13 @@ function App() {
                 </>
               }
             ></Route>
-            <Route
-              path="/time-table"
-              element={
-                <>
-                  <PageTitle title={"TIME TABLE"} />
-                  <DoctorsTimetable />
-                </>
-              }
-            ></Route>
+
             <Route
               path="/about"
               element={
                 <>
                   <PageTitle title={"ABOUT US"} />
                   <About />
-                </>
-              }
-            ></Route>
-
-            <Route
-              path="/packages"
-              element={
-                <>
-                  <PageTitle title={"PACKAGES"} />
-                  <Packages />
-                </>
-              }
-            ></Route>
-            <Route
-              path="/packages/package-details/:id"
-              element={
-                <>
-                  <PageTitle title={"PACKAGE DETAILS"} />
-                  <PackagesDetails />
                 </>
               }
             ></Route>
@@ -192,15 +165,6 @@ function App() {
               }
             ></Route>
 
-            <Route
-              path="/appointment-doctor/:id"
-              element={
-                <>
-                  <PageTitle title={"APPOINTMENT"} />
-                  <AppointmentDoctor />
-                </>
-              }
-            ></Route>
             <Route
               path="/ortho-smart"
               element={

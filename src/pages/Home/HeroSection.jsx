@@ -167,8 +167,8 @@ const HeroSection = () => {
 
   return (
     <Wrapper className="py-5">
-      <div className="container hero-section px-lg-1 py-0">
-        <div className="my-3">
+      <div className="container hero-section px-lg-1">
+        <div className="my-5">
           <div className="row g-4">
             {/* LEFT COLUMN */}
             <div className="col-lg-7 d-flex flex-column gap-4">
@@ -1345,7 +1345,8 @@ const Wrapper = styled.section`
   /* RESPONSIVE DESIGN */
   @media (max-width: 991px) {
     .medical-slide-card {
-      height: 280px;
+      /* height: 280px; */
+       height: 350px;
     }
 
     .medical-slide-content h3 {
@@ -1387,7 +1388,8 @@ const Wrapper = styled.section`
 
   @media (max-width: 576px) {
     .medical-slide-card {
-      height: 200px;
+      /* height: 200px; */
+       height: 350px;
     }
 
     .medical-slide-content h3 {

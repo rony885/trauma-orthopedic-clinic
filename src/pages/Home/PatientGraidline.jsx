@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
 import {
   FaRegCircle,
   FaHeartbeat,
@@ -11,16 +10,59 @@ import {
   FaStar,
 } from "react-icons/fa";
 
+// PATIENT GUIDELINE DATA
+const patientGuidelineData = [
+  {
+    id: 1,
+    icon: <FaRegCircle />,
+    title: "হাঁটু ও জয়েন্ট ব্যথা",
+    description: "ব্যথা, ফোলা, শক্ত হয়ে যাওয়া বা চলাচলে সমস্যা",
+  },
+  {
+    id: 2,
+    icon: <FaHeartbeat />,
+    title: "স্পাইন ও কোমর ব্যথা",
+    description: "কোমর ব্যথা, সায়াটিকা বা পায়ে ব্যথা ছড়িয়ে যাওয়া",
+  },
+  {
+    id: 3,
+    icon: <FaPlus />,
+    title: "ফ্র্যাকচার ও ট্রমা",
+    description: "দুর্ঘটনা, হাড় ভাঙা, আঘাতের পর ফোলা ও ব্যথা",
+  },
+  {
+    id: 4,
+    icon: <FaGem />,
+    title: "ঘাড় ও কাঁধের সমস্যা",
+    description: "ঘাড়ে টান, কাঁধে ব্যথা বা হাত তুলতে অসুবিধা",
+  },
+  {
+    id: 5,
+    icon: <FaExternalLinkAlt />,
+    title: "স্পোর্টস ইনজুরি",
+    description: "লিগামেন্ট, টেন্ডন ও খেলাধুলাজনিত আঘাত",
+  },
+  {
+    id: 6,
+    icon: <FaStar />,
+    title: "হাড়ের ক্ষয় ও দুর্বলতা",
+    description: "অস্টিওপোরোসিস ও বয়সজনিত হাড়ের সমস্যা",
+  },
+];
+
 const PatientGraidline = () => {
   return (
     <Wrapper className="py-5">
       <div className="container section-wrapper">
+        {/* SECTION HEADER */}
         <div className="d-flex justify-content-between align-items-start mb-4">
           <div>
             <span className="badge-pill">রোগীর জন্য দ্রুত গাইড</span>
+
             <h2 className="main-title">
               যেসব সমস্যায় বিশেষজ্ঞের পরামর্শ নেবেন
             </h2>
+
             <p className="sub-title">
               আপনার লক্ষণের সাথে মিল থাকলে সময় নির্বাচন করে সরাসরি সিরিয়াল
               নিতে পারেন।
@@ -32,97 +74,31 @@ const PatientGraidline = () => {
           </Link>
         </div>
 
+        {/* PATIENT GUIDELINE CARDS */}
         <div className="row g-3 mb-3">
-          <div className="col-12 col-md-6 col-lg-4">
-            <div className="service-card">
-              <div className="icon-box">
-                <FaRegCircle />
-              </div>
-              <div>
-                <h5 className="card-title-text">হাঁটু ও জয়েন্ট ব্যথা</h5>
-                <p className="card-desc-text">
-                  ব্যথা, ফোলা, শক্ত হয়ে যাওয়া বা চলাচলে সমস্যা
-                </p>
-              </div>
-            </div>
-          </div>
+          {patientGuidelineData.map((item) => (
+            <div className="col-12 col-md-6 col-lg-4" key={item.id}>
+              <div className="service-card">
+                <div className="icon-box">{item.icon}</div>
 
-          <div className="col-12 col-md-6 col-lg-4">
-            <div className="service-card">
-              <div className="icon-box">
-                <FaHeartbeat />
-              </div>
-              <div>
-                <h5 className="card-title-text">স্পাইন ও কোমর ব্যথা</h5>
-                <p className="card-desc-text">
-                  কোমর ব্যথা, সায়াটিকা বা পায়ে ব্যথা ছড়িয়ে যাওয়া
-                </p>
-              </div>
-            </div>
-          </div>
+                <div>
+                  <h5 className="card-title-text">{item.title}</h5>
 
-          <div className="col-12 col-md-6 col-lg-4">
-            <div className="service-card">
-              <div className="icon-box">
-                <FaPlus />
-              </div>
-              <div>
-                <h5 className="card-title-text">ফ্র্যাকচার ও ট্রমা</h5>
-                <p className="card-desc-text">
-                  দুর্ঘটনা, হাড় ভাঙা, আঘাতের পর ফোলা ও ব্যথা
-                </p>
+                  <p className="card-desc-text">{item.description}</p>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="col-12 col-md-6 col-lg-4">
-            <div className="service-card">
-              <div className="icon-box">
-                <FaGem />
-              </div>
-              <div>
-                <h5 className="card-title-text">ঘাড় ও কাঁধের সমস্যা</h5>
-                <p className="card-desc-text">
-                  ঘাড়ে টান, কাঁধে ব্যথা বা হাত তুলতে অসুবিধা
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-12 col-md-6 col-lg-4">
-            <div className="service-card">
-              <div className="icon-box">
-                <FaExternalLinkAlt />
-              </div>
-              <div>
-                <h5 className="card-title-text">স্পোর্টস ইনজুরি</h5>
-                <p className="card-desc-text">
-                  লিগামেন্ট, টেন্ডন ও খেলাধুলাজনিত আঘাত
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-12 col-md-6 col-lg-4">
-            <div className="service-card">
-              <div className="icon-box">
-                <FaStar />
-              </div>
-              <div>
-                <h5 className="card-title-text">হাড়ের ক্ষয় ও দুর্বলতা</h5>
-                <p className="card-desc-text">
-                  অস্টিওপোরোসিস ও বয়সজনিত হাড়ের সমস্যা
-                </p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
+        {/* ALERT BANNER */}
         <div className="alert-banner d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
           <div className="d-flex align-items-center gap-3">
             <div className="alert-icon">!</div>
+
             <div>
               <h6 className="alert-title">কখন দ্রুত পরামর্শ নেবেন?</h6>
+
               <p className="alert-desc">
                 ব্যথা দীর্ঘদিন থাকলে, আঘাতের পর নড়াচড়া কঠিন হলে, হাত-পায়ে
                 অবশ/ঝিনঝিন হলে অথবা কোমর থেকে পায়ে ব্যথা ছড়িয়ে গেলে
@@ -142,6 +118,7 @@ const PatientGraidline = () => {
   );
 };
 
+// STYLES
 const Wrapper = styled.section`
   .section-wrapper {
     background-color: #f0fafd;

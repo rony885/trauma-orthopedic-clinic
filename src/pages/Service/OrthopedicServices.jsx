@@ -50,36 +50,29 @@ const OrthopedicServices = () => {
   return (
     <Wrapper className="pt-0 pb-5">
       <div className="container mt-0 pt-0">
-        {/* HEADER SECTION */}
         <div className="service-header mb-4 pb-2">
-          {/* MAIN TITLE */}
           <h1 className="page-title pb-0 pt-5 mb-2">অর্থোপেডিক সেবাসমূহ</h1>
 
-          {/* SUBTITLE + SERVICE COUNT */}
           <div className="header-subtitle-row">
             <p className="page-subtitle mb-0">
               সমস্যার ধরন অনুযায়ী প্রয়োজনীয়{" "}
               <span className="en-font">care category</span> নির্বাচন করুন
             </p>
 
-            {/* SERVICE COUNT BADGE */}
             <span className="main-badge">১২ টি সেবা</span>
           </div>
         </div>
 
-        {/* SERVICES GRID */}
         <div className="row g-4">
           {services.map((service) => (
             <div className="col-12 col-lg-6" key={service.id}>
               <div className="service-card-outer">
-                {/* CARD HEADER */}
                 <div className="d-flex justify-content-between align-items-center">
                   <h2 className="card-header-title">{service.title}</h2>
 
                   <span className="count-badge">{service.count}</span>
                 </div>
 
-                {/* INNER CARD */}
                 <div className="service-card-inner">
                   <span className="category-tag">{service.category}</span>
 
